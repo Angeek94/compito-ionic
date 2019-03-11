@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div >
+        <ion-card >
+          <ion-card-header>
+            <ion-card-subtitle> {{post.author}}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+              <ion-img [src]="[post.image]"></ion-img>
+      
+              {{post.message}}<br>
+      </ion-card-content>
+      <ion-icon name="thumbs-up"></ion-icon>
+     
+          <div *ngFor="let like of post.likes">
+              
+                  {{like}}
+              
+          </div>
+      <div *ngFor="let comment of post.comments">
+        
+        <strong>{{comment.author}}</strong>
+          {{comment.message}}
+       </div>
+        </ion-card>
+      
+        
+      </div>  
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>newpost</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    
+    <ion-input [(ngModel)]="post.author" placeholder="Author"></ion-input>
+    <ion-input [(ngModel)]=[post.image]placeholder="Image"></ion-input>
+    
+    <ion-input [(ngModel)]="post.message" placeholder="Message"></ion-input>
+    <ion-button (click)="newPost()">Aggiungi Post
+    </ion-button>
+    
+</ion-content>
